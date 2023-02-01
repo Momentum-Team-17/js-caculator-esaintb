@@ -1,7 +1,7 @@
 body {
     display: flex; 
     flex-direction: column; 
-    border: 2px solid #6630A4;
+    border: 3px solid #6630A4;
     width: 50%;
 }
 section {
@@ -20,3 +20,17 @@ div {
     font-size: 150%; 
 }
 
+div:hover {
+    background-color: #c874d2;
+}
+
+.clear-button {
+    flex: 1 1 0;
+}
+
+.output {
+    flex: 9 1 0;
+}
+.output:hover {
+    background-color: #E3A3EA;
+}
