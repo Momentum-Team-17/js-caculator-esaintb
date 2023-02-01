@@ -4,13 +4,15 @@ let buttons = document.querySelectorAll(".button")
 const displayScreen = document.querySelector('#container')
 console.log(buttons)
 
-const fullDisplay = [];
+let fullDisplay = [];
+// use let not const here so when the variable changes in 34 it can change
 for (let button of buttons) {
     button.addEventListener('click', function (event) {
         console.log(event.target.innerText)
         let buttonValue = event.target.innerText;
         fullDisplay.push(buttonValue);
         displayScreen.innerText = fullDisplay.join("");
+        // forces to display buttons when clicked 
     })
 }
 
@@ -29,4 +31,5 @@ equalButton.addEventListener('click', function (event) {
 const clearButton = document.querySelector(".clear");
 clearButton.addEventListener('click', function (event) {
     displayScreen.innerText = "";
+    fullDisplay = [];
 })
